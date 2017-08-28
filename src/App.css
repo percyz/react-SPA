@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #ff4444;
+  height: 80px;
+  color: white;
+}
+
+.title-header {
+  font-weight: bold;
+} 
+
+.right-header {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #222;
+  height: 80px;
+  color: #bababa;
+  font-size: 20px;
+}
+
+.signUp {
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-right: 100px;
+}
+
+.container {
+  width: 70.4%;
+}
+
+.nav-pills {
+  padding: 20px;
+}
+
+.panel-primary {
+  text-justify: left;
+}
+
+.panel-heading {
+  display: flex;
+  flex-wrap: nowrap;
+  font-weight: bold;
+}
+
+.panel-title {
+  margin-top: auto;
+  margin-left: 20px;
+  margin-bottom: auto;
+  margin-right: auto;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.panel-button {
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-right: 20px;
+}
+
+.panel-text {
+  text-align: left;
+}
+
+.carousel {
+  margin-top: 10px;
+  height: 400px;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
