@@ -6,7 +6,8 @@ export default class Item extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userComments:[],
+      userComments: [],
+      viewComments: true,
     };
     this.getComment = this.getComment.bind(this);
     this.clearComments = this.clearComments.bind(this);
@@ -30,10 +31,16 @@ export default class Item extends Component {
 
   render() {
 
+    console.log("viewComments: ", this.state.viewComments);
+
     /* map the comments */
     const allComments = this.state.userComments.map((com)=>{
         return(
-            <li>{com.content} -- {com.date}</li>
+          <div className="row" >
+            <li className="panel">             
+              {com.content} -- {com.date} 
+            </li>
+          </div>
         )
     });
 
