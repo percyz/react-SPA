@@ -25,11 +25,6 @@ export default class Content extends Component {
     return (
         <div className="container">
 
-            {/* the title of body */}
-            <div>
-                <header><h3>JavaScript libraries</h3></header><hr />
-            </div>
-
             {/* the content of body */}
             <div>
                 {renderTasks}

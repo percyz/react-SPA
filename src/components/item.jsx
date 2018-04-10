@@ -47,14 +47,15 @@ export default class Item extends Component {
     const buttonName = "#"+this.props.language.name;
 
     return (
-      <div className="panel panel-primary">
+
+      <div className="panel panel-info">
 
         {/* the header of single item, including title and tow buttons */}
         <div className="panel-heading">
           <h2 className="panel-title">{this.props.language.name}</h2>
           <div className="panel-button btn-group btn-group-lg">
-            <button className="btn btn-primary btn-lg" type="button" data-toggle="modal" data-target={buttonName} >Add Comment</button>
-            <button className="btn btn-primary btn-lg" type="button" onClick={this.clearComments} >Clear Comment</button>
+            <button className="btn btn-default btn-lg" type="button" data-toggle="modal" data-target={buttonName} >Add Comment</button>
+            <button className="btn btn-default btn-lg" type="button" onClick={this.clearComments} >Clear Comment</button>
           </div>
         </div><br />
 
@@ -62,11 +63,10 @@ export default class Item extends Component {
         <div className="panel-body">
 
             <div className="panel-text">
-              {this.props.language.text}
+              <h5>{this.props.language.text}</h5>
             </div>
 
             <div className="panel-text">
-              <h4>Comments:</h4> 
               <ul>{allComments}</ul>
             </div>
           

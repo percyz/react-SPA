@@ -22,12 +22,13 @@ export default class CommentModal extends Component {
   render() {
     return (
         /* the modal for writing comment, including the tilte, textarea and buttons */
-        <div className="modal fade" id={this.props.name} tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div className="modal-dialog">
+        <div>
+         <div className="modal fade" id={this.props.name} tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div className="modal-dialog commentModel">
                 <div className="modal-content">
-                    <div className="modal-header">
-                        <button type="button" className="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div className="modal-header commentModel-header">
                         <h4 className="modal-title" id="myModalLabel">{this.props.name}</h4>
+                        <button type="button" className="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div className="modal-body">
                         <textarea type="text" value={this.state.comments} onChange={this.handleChange} className="form-control" placeholder="Add your comment" />
@@ -37,6 +38,7 @@ export default class CommentModal extends Component {
                     </div>
                 </div>
             </div>
+        </div> 
         </div>
     );
   }
