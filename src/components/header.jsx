@@ -15,7 +15,7 @@ export default class Header extends Component {
 
               <ul className="nav nav-pills">
                 <li><Link to="/"><h3>Home</h3></Link></li>
-                <li><Link to="/libraries"><h3>Libraries</h3></Link></li>
+                {/* <li><Link to="/libraries"><h3>Libraries</h3></Link></li> */}
                 <li><Link to="/signUp"><h3>Sign In</h3></Link></li>
               </ul>
           </div> 

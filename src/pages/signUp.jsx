@@ -8,11 +8,48 @@ export default class SignUp extends Component {
     super(props);
     this.state = {
       viewSignIn: true,
+      username: '',
+      email: '',
+      password: '',
+      passwordConfirm: '',
     }
+
+    this.onNameChange = this.onNameChange.bind(this);
+    this.onPasswordChange = this.onPasswordChange.bind(this);
+    this.onPasswordConfirmChange = this.onPasswordConfirmChange.bind(this);
+    this.onEmailChange = this.onEmailChange.bind(this);
+    this.onLogin = this.onLogin.bind(this);
+
   }
+
+  onNameChange(event) {
+    this.setState({username: event.target.value})
+  }
+
+  onPasswordChange(event) {
+    this.setState({password: event.target.value});
+  }
+
+  onPasswordConfirmChange(event) {
+     this.setState({passwordConfirm: event.target.value});
+  }
+
+  onEmailChange(event) {
+    this.setState({email: event.target.value});
+  }
+
+  onLogin() {
+    console.log(`Login info: ${this.state.username}`);
+  }
+
+  onRegister() {
+
+  }
+
 
   render() {
     return (
+
       <div>
       <Header />
       
@@ -39,13 +76,13 @@ export default class SignUp extends Component {
 
                       {this.state.viewSignIn? 
 
-                      <form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" >
+                      <form id="login-form" method="post" role="form" onSubmit={this.onLogin} >
                         <div className="form-group">
-                          <input type="text" name="username" id="username" tabindex="1" className="form-control" placeholder="Username" value="" />
+                          <input type="text" tabindex="1" className="form-control" placeholder="Username" value={this.state.username} onChange={this.onNameChange} />
                         </div>
 
                         <div className="form-group">
-                          <input type="password" name="password" id="password" tabindex="2" className="form-control" placeholder="Password" />
+                          <input type="password" tabindex="2" className="form-control" placeholder="Password" value={this.state.password} onChange={this.onPasswordChange} />
                         </div>
                         <div className="form-group text-center">
                           <input type="checkbox" tabindex="3" className="" name="remember" id="remember" />
@@ -55,7 +92,7 @@ export default class SignUp extends Component {
                         <div className="form-group">
                           <div className="row">
                             <div className="col-sm-6 col-sm-offset-3">
-                              <button type="submit" name="login-submit" id="login-submit" tabindex="4" className="form-control btn btn-login">Log In</button>
+                              <input type="submit" value="Submit" tabindex="4" className="form-control btn btn-login" />
                             </div>
                           </div>
                         </div>
@@ -64,7 +101,7 @@ export default class SignUp extends Component {
                           <div className="row">
                             <div className="col-lg-12">
                               <div className="text-center">
-                                <a href="https://phpoll.com/recover" tabindex="5" className="forgot-password">Forgot Password?</a>
+                                <a tabindex="5" className="forgot-password">Forgot Password?</a>
                               </div>
                             </div>
                           </div>
@@ -73,21 +110,21 @@ export default class SignUp extends Component {
 
                       :
 
-                      <form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" >
+                      <form id="register-form" method="post" role="form" >
                         <div className="form-group">
-                          <input type="text" name="username" id="username" tabindex="1" className="form-control" placeholder="Username" value="" />
+                          <input type="text" tabindex="1" className="form-control" placeholder="Username" value={this.state.username} onChange={this.onNameChange} />
                         </div>
 
                         <div className="form-group">
-                          <input type="email" name="email" id="email" tabindex="1" className="form-control" placeholder="Email Address" value="" />
+                          <input type="email" tabindex="1" className="form-control" placeholder="Email Address" value={this.state.email} onChange={this.onEmailChange} />
                         </div>
 
                         <div className="form-group">
-                          <input type="password" name="password" id="password" tabindex="2" className="form-control" placeholder="Password" />
+                          <input type="password" tabindex="2" className="form-control" placeholder="Password" value={this.state.password} onChange={this.onPasswordChange} />
                         </div>
 
                         <div className="form-group">
-                          <input type="password" name="confirm-password" id="confirm-password" tabindex="2" className="form-control" placeholder="Confirm Password" />
+                          <input type="password" tabindex="2" className="form-control" placeholder="Confirm Password" value={this.state.passwordConfirm} onChange={this.onPasswordConfirmChange} />
                         </div>
 
                         <div className="form-group">
@@ -103,7 +140,7 @@ export default class SignUp extends Component {
                     </div>
                   </div>
                 </div>
-                
+        
               </div>
             </div>
           </div>
