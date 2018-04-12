@@ -19,7 +19,7 @@ export default class SignUp extends Component {
     this.onPasswordConfirmChange = this.onPasswordConfirmChange.bind(this);
     this.onEmailChange = this.onEmailChange.bind(this);
     this.onLogin = this.onLogin.bind(this);
-
+    this.onRegister = this.onRegister.bind(this);
   }
 
   onNameChange(event) {
@@ -38,12 +38,14 @@ export default class SignUp extends Component {
     this.setState({email: event.target.value});
   }
 
-  onLogin() {
+  onLogin(event) {
     console.log(`Login info: ${this.state.username}`);
+    event.preventDefault();
   }
 
-  onRegister() {
-
+  onRegister(event) {
+    console.log(`Login info: ${this.state.username}`);
+    event.preventDefault();
   }
 
 
@@ -75,8 +77,7 @@ export default class SignUp extends Component {
                     <div className="col-lg-12">
 
                       {this.state.viewSignIn? 
-
-                      <form id="login-form" method="post" role="form" onSubmit={this.onLogin} >
+                     <form id="login-form" method="post" role="form" onSubmit={this.onLogin} >
                         <div className="form-group">
                           <input type="text" tabindex="1" className="form-control" placeholder="Username" value={this.state.username} onChange={this.onNameChange} />
                         </div>
@@ -92,7 +93,7 @@ export default class SignUp extends Component {
                         <div className="form-group">
                           <div className="row">
                             <div className="col-sm-6 col-sm-offset-3">
-                              <input type="submit" value="Submit" tabindex="4" className="form-control btn btn-login" />
+                              <input type="submit" value="Login" tabindex="4" className="form-control btn btn-login" />
                             </div>
                           </div>
                         </div>
@@ -110,7 +111,7 @@ export default class SignUp extends Component {
 
                       :
 
-                      <form id="register-form" method="post" role="form" >
+                      <form id="register-form" method="post" role="form" onSubmit={this.onRegister} >
                         <div className="form-group">
                           <input type="text" tabindex="1" className="form-control" placeholder="Username" value={this.state.username} onChange={this.onNameChange} />
                         </div>
@@ -130,7 +131,7 @@ export default class SignUp extends Component {
                         <div className="form-group">
                           <div className="row">
                             <div className="col-sm-6 col-sm-offset-3">
-                              <button type="submit" name="register-submit" id="register-submit" tabindex="4" className="form-control btn btn-register" >Register Now</button>
+                              <button type="submit" value="Submit" name="register-submit" id="register-submit" tabindex="4" className="form-control btn btn-register" >Register Now</button>
                             </div>
                           </div>
                         </div>
@@ -149,3 +150,8 @@ export default class SignUp extends Component {
     );
   }
 }
+
+
+        {/*  */}
+
+        //   <form onSubmit={this.onLogin}>
