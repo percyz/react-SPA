@@ -31,7 +31,7 @@ export default class CommentModal extends Component {
                         <button type="button" className="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div className="modal-body">
-                        <textarea type="text" value={this.state.comments} onChange={this.handleChange} className="form-control" placeholder="Add your comment" />
+                        <textarea className="form-control" type="text" value={this.state.comments} onChange={this.handleChange} placeholder="Add your comment" />
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-primary" onClick={this.submitComment} data-dismiss="modal">Submit</button>

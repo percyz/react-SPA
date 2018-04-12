@@ -72,6 +72,7 @@
 
 .panel-text {
   text-align: center;
+  padding: 10px;
 }
  
 .carousel {
@@ -83,9 +84,17 @@
   font-size: large;
 }
 
+.modal-content {
+  min-height: 200px;
+}
+
+.form-control {
+  min-height: 100px;
+  font-size: 2em;
+}
+
 .commentModel {
   margin-top: 250px;
-  /* background-color: blue; */
 }
 
 .commentModel-header {

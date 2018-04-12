@@ -38,7 +38,7 @@ export default class Item extends Component {
         return(
           <div className="row" >
             <li className="panel">             
-              {com.content} -- {com.date} 
+              <h4>{com.content} -- {com.date}</h4> 
             </li>
           </div>
         )
@@ -63,7 +63,7 @@ export default class Item extends Component {
         <div className="panel-body">
 
             <div className="panel-text">
-              <h5>{this.props.language.text}</h5>
+              <h4>{this.props.language.text}</h4>
             </div>
 
             <div className="panel-text">
