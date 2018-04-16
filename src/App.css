@@ -88,8 +88,9 @@
   min-height: 200px;
 }
 
-.form-control {
-  min-height: 100px;
+.form-control-textarea {
+  min-width: 450px; 
+  min-height: 100px;  
   font-size: 2em;
 }
 
