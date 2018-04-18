@@ -15,6 +15,29 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  background-color: #555555;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  box-shadow: 1px 2px #888888;
+  min-height: 100px;
+}
+
+.App-header-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.App-header-logo-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.App-header-logo-title-color {
+  color: #00cbff;
+  font-weight: bold;
 }
 
 .title-header {
@@ -23,10 +46,28 @@
 
 .App_header_Jumbotron {
   display: flex;
-  flex-direction: column;
+  flex: 1;
+  flex-direction: row;
+  background-color: #00afdb;
+  box-shadow: 1px 2px #888888;
+  align-items: center;
+  justify-content: flex-start; 
+  min-height: 50px; 
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+}
+
+.App_header_Jumbotron_text {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  padding-left: 30px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .signUp {
@@ -40,6 +81,12 @@
   width: 60%;
 }
 
+.content-title {
+  padding: 20px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 20px;
+}
+
 .nav-pills {
   padding: 20px;
 }
@@ -49,9 +96,11 @@
 }
 
 .panel-heading {
-  display: flex;
-  flex-wrap: nowrap;
-  font-weight: bold;
+   display: flex; 
+  /* flex-direction: row; */
+   /* flex-wrap: nowrap; 
+   font-weight: bold;  */
+   background-color: red;  
 }
 
 .panel-title {
@@ -61,6 +110,7 @@
   margin-right: auto;
   font-size: 25px;
   font-weight: bold;
+  color: #555555;
 }
 
 .panel-button {
@@ -71,7 +121,7 @@
 }
 
 .panel-text {
-  text-align: center;
+  text-align: left; 
   padding: 10px;
 }
  

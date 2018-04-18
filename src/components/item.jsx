@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import { Panel } from 'react-bootstrap';
+
 import CommentModal from './commentModal.jsx'
  
 export default class Item extends Component {
@@ -48,19 +50,21 @@ export default class Item extends Component {
 
     return (
 
-      <div className="panel panel-info">
+      <Panel>
 
         {/* the header of single item, including title and tow buttons */}
-        <div className="panel-heading">
+        <Panel.Heading bsClass="panel-heading">
+          
           <h2 className="panel-title">{this.props.language.name}</h2>
           <div className="panel-button btn-group btn-group-lg">
-            <button className="btn btn-default btn-lg" type="button" data-toggle="modal" data-target={buttonName} >Add Comment</button>
-            <button className="btn btn-default btn-lg" type="button" onClick={this.clearComments} >Clear Comment</button>
+            <button className="btn btn-info btn-lg" type="button" data-toggle="modal" data-target={buttonName} >Add Comment</button>
+            <button className="btn btn-info btn-lg" type="button" onClick={this.clearComments} >Clear Comment</button>
           </div>
-        </div><br />
+          
+        </Panel.Heading><br />
 
         {/* the content of single item, including the introduction and comments */}
-        <div className="panel-body">
+        <Panel.Body className="panel-body">
 
             <div className="panel-text">
               <h4>{this.props.language.text}</h4>
@@ -73,9 +77,9 @@ export default class Item extends Component {
             <div>
               <CommentModal name={this.props.language.name} sendComment={this.getComment} />
             </div>       
-        </div>
+        </Panel.Body>
         
-      </div>
+      </Panel>
     );
   }
 }

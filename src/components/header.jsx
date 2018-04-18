@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
 import logo from '../logo.svg';
 import '../App.css'; 
 
@@ -10,21 +11,26 @@ export default class Header extends Component {
         <div className="column">
 
           {/* the title of page */}
-           <div className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
+          <div className="App-header">
+              <div className="App-header-logo">
+                <img src={logo} className="App-logo" alt="logo" />
+                <div className="App-header-logo-title">
+                  <h1 className="App-header-logo-title-color">JS</h1><h1>Comments</h1>
+                </div>
+              </div>
 
-              <ul className="nav nav-pills">
-                <li><Link to="/"><h3>Home</h3></Link></li>
-                {/* <li><Link to="/libraries"><h3>Libraries</h3></Link></li> */}
-                <li><Link to="/signUp"><h3>Sign In</h3></Link></li>
-              </ul>
+              <div className="nav nav-pills">
+                 <Link to="/signUp"><h3 className="App_header_Jumbotron_text">Sign In</h3></Link>
+              </div>
           </div> 
 
           {/* the navigation of page */}
-          <Jumbotron className="App_header_Jumbotron">
-            <h2>Pick a JavaScrapt framework</h2>
-            <h2>Leave your comments</h2>
-          </Jumbotron>
+          <div className="App_header_Jumbotron">
+            <h3><Link to="/" className="App_header_Jumbotron_text">Home</Link></h3>
+            <h3><Link to="/" className="App_header_Jumbotron_text">About Us</Link></h3>
+            <h3><Link to="/"className="App_header_Jumbotron_text">Contact Us</Link></h3>
+            {/* <li><Link to="/libraries"><h3>Libraries</h3></Link></li> */}
+          </div>
         </div>
     );
   }
